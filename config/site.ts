@@ -64,10 +64,10 @@ export const siteConfig = {
     // },
   ],
   links: {
-    github: "https://github.com/",
-    twitter: "https://twitter.com/getnextui",
+    github: "https://github.com/atharva0411/minorproject",
+    twitter: "https://twitter.com/",
     docs: "https://drive.google.com/drive/folders/10HIDKmfnGTuDf_OdqrlWIuxgwBjDmNsR?usp=drive_link",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    discord: "https://discord.gg/",
+    sponsor: "https://patreon.com/",
   },
 };
