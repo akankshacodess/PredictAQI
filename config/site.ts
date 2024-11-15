@@ -41,15 +41,15 @@ export const siteConfig = {
     // {
     //   label: "Github",
     //   href: "/github",
+    {
+      label: "AQI Prediction",
+      href: "/predict",
+    },
     // },
     {
       label: "Team",
       href: "/team",
     },
-    // {
-    //   label: "Calendar",
-    //   href: "/calendar",
-    // },
     // {
     //   label: "Settings",
     //   href: "/settings",
@@ -66,8 +66,9 @@ export const siteConfig = {
   links: {
     github: "https://github.com/atharva0411/minorproject",
     twitter: "https://twitter.com/",
-    docs: "https://drive.google.com/drive/folders/10HIDKmfnGTuDf_OdqrlWIuxgwBjDmNsR?usp=drive_link",
+    docs: "/",
     discord: "https://discord.gg/",
     sponsor: "https://patreon.com/",
+    predict:"/predict",
   },
 };

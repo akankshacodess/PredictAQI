@@ -1,0 +1,37 @@
+       const parseDate = (dateString: string): Date => {
+    const [day, month, year] = dateString.split("-");
+    return new Date(`${year}-${month}-${day}`);
+  };
+     
+      const selectedDate = parseDate(date);
+    const min = parseDate(minDate);
+    const max = parseDate(maxDate);
+
+    if (selectedDate < min || selectedDate > max) {
+      alert("Selected date is outside the available prediction range.");
+      return;
+    }   
+     
+      {result && (
+        <div className="mt-4 p-4 border border-gray-300 rounded-md w-full max-w-md">
+          <h3 className="font-bold text-lg mb-2">Prediction Result:</h3>
+          <p>
+            <strong>Date:</strong> {result.date}
+          </p>
+          <p>
+            <strong>Model:</strong> {result.model}
+          </p>
+          <p>
+            <strong>Predicted AQI:</strong> {result.aqi}
+          </p>
+          <h4 className="mt-2 font-semibold">Parameters:</h4>
+          <ul>
+            {Object.entries(result.parameters).map(([key, value]) => (
+              <li key={key}>
+                {key}: {String(value)}
+              </li>
+            ))}
+          </ul>
+          {/* <p>{JSON.stringify(result)}</p> */}
+        </div>
+      )}
