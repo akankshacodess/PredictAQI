@@ -51,6 +51,7 @@ export default function RootLayout({
           </div>
         </Providers>
       </body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
     </html>
   );
 }

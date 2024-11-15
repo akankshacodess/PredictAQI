@@ -21,23 +21,23 @@ export default function Predict() {
 
     try {
       setLoading(true);
-      const response = await fetch("/api/predict", {
+      const response = await fetch("http://localhost:3000/api/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ date, model }),
       });
-
+      
       if (!response.ok) {
         const error = await response.json();
         throw new Error(error.error);
       }
 
       console.log("Sending request:", { date, model });
-
       const data = await response.json();
-      setResult(data);
+      console.log("Received response:", data.prediction);
+      setResult(data.prediction);
     } catch (error: any) {
       alert(error.message);
     } finally {
@@ -100,10 +100,13 @@ export default function Predict() {
       {result && (
         <div>
           <h3>Prediction Result:</h3>
-          <p>Date: {result.date}</p>
-          <p>Model: {result.model}</p>
-          <p>Predicted AQI: {result.aqi}</p>
-          {/* Display parameters */}
+          <p>Date: {result.Date}</p>
+          <p>CO: {result.CO}</p>
+          <p>Predicted NO2: {result.NO2}</p>
+          <p>Predicted Ozone: {result.Ozone}</p>
+          <p>Predicted PM2.5: {result['PM2.5']}</p>
+          <p>Predicted PM10: {Number(result.PM10).toFixed(2)}</p>
+          <p>Predicted SO2: {result.SO2}</p>
         </div>
       )}
     </div>
