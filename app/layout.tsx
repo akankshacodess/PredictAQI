@@ -38,7 +38,7 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
+          fontSans.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
@@ -47,11 +47,11 @@ export default function RootLayout({
             <main className="container mx-auto pt-16 px-6 flex-grow">
               {children}
             </main>
-            <Footer/>
+            <Footer />
           </div>
         </Providers>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js" />
       </body>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
     </html>
   );
 }

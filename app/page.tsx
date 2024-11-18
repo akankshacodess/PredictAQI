@@ -28,7 +28,8 @@ export default function Home() {
           <Link
             isExternal
             className={buttonStyles({
-              color: "primary",
+              // color: "primary",
+              className: "bg-blue-500 text-white",
               radius: "full",
               variant: "shadow",
             })}
@@ -49,7 +50,7 @@ export default function Home() {
           <Link
             isExternal
             className={buttonStyles({
-              // color: "primary",
+              color: "primary",
               radius: "full",
               className: "bg-gray-300 text-black",
               variant: "shadow",
