@@ -43,7 +43,7 @@ export default function AQIComponent({ result }: { result: any }) {
     SO2: Number(result.SO2),
   };
   const aqi = calculateAQI(parameters);
-  console.log(aqi);
+  // console.log(aqi);
 
   return (
     <div className="flex justify-center items-center h-full">

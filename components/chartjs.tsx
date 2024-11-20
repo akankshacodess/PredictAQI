@@ -2,7 +2,7 @@ import { Chart, ArcElement } from "chart.js";
 
 Chart.register(ArcElement);
 
-const datapred = { prediction };
+// const datapred = { prediction };
 const data = {
   datasets: [
     {

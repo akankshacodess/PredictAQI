@@ -1,12 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
+
 import Alert from "@/components/alert";
 import AQIComponent from "@/components/AqiComponent";
 // import DoughnutChart from "@/components/chartjs";
 // import { config } from "@/components/chartjs";
 import { title } from "@/components/primitives";
+
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+
 import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -27,6 +30,7 @@ export default function Predict() {
 
     if (!date || !model) {
       setIsAlertOpen(true);
+
       return;
     }
 
@@ -168,8 +172,10 @@ export default function Predict() {
                       data={chartData}
                       options={chartOptions}
                     ></Doughnut>
+                    <div className="pt-5">
+                      <AQIComponent result={result} />
+                    </div>
                   </div>
-                  <AQIComponent result={result} />
 
                   {/* <h3>Prediction Result:</h3>
                 <p>Date: {result.Date.split("T")[0]}</p>
