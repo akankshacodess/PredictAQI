@@ -36,7 +36,7 @@ export default function Predict() {
 
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:3000/api/predict", {
+      const response = await fetch("https://predictingaqi.vercel.app/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
