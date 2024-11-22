@@ -1,16 +1,10 @@
 "use client";
-
 import React, { useState } from "react";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
 
 import Alert from "@/components/alert";
-import AQIComponent from "@/components/AqiComponent";
-// import DoughnutChart from "@/components/chartjs";
-// import { config } from "@/components/chartjs";
 import { title } from "@/components/primitives";
-
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-
-import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -36,6 +30,7 @@ export default function Predict() {
 
     try {
       setLoading(true);
+      //http://localhost:3000/api/predict
       const response = await fetch("/api/predict", {
         method: "POST",
         headers: {
@@ -106,7 +101,7 @@ export default function Predict() {
     <>
       <div>
         <h2 className={title()}>AQI Prediction</h2>
-        <div className="p-6 grid grid-cols-2 gap-6">
+        <div className="p-6 grid grid-cols-2 md:grid-cols-1 gap-6">
           <form onSubmit={handleSubmit} className="w-full max-w-md ">
             <div className=" mb-5">
               <label
@@ -172,9 +167,9 @@ export default function Predict() {
                       data={chartData}
                       options={chartOptions}
                     ></Doughnut>
-                    <div className="pt-5">
+                    {/* <div className="pt-5">
                       <AQIComponent result={result} />
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* <h3>Prediction Result:</h3>
