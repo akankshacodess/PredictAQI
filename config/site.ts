@@ -66,9 +66,9 @@ export const siteConfig = {
   links: {
     github: "https://github.com/atharva0411/minorproject",
     twitter: "https://twitter.com/",
-    docs: "/",
+    docs: "https://drive.google.com/drive/folders/1gSuLdN4Q7CNmaUPFzkEvVwbhuOJjGB-n?usp=sharing",
     discord: "https://discord.gg/",
     sponsor: "https://patreon.com/",
-    predict:"/predict",
+    predict: "/predict",
   },
 };

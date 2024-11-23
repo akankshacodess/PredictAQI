@@ -32,7 +32,7 @@ export default function AboutPage() {
             <h2 className="font-bold text-2xl mb-4 text-primary">
               Introduction
             </h2>
-            <p className="text-secondary">
+            <p className="text-secondary-foreground">
               Air pollution poses significant threats to public health and the
               environment, making accurate prediction of pollutant levels a
               critical task for urban planning, policy-making, and health
@@ -67,7 +67,7 @@ export default function AboutPage() {
             <h2 className="font-bold text-2xl mb-4 text-primary">
               Problem We Faced
             </h2>
-            <p className="text-secondary">
+            <p className="text-secondary-foreground">
               Air quality forecasting is a complex problem influenced by
               numerous factors, including previous pollutant levels and
               environmental variables. Traditional statistical models often fail
@@ -100,7 +100,7 @@ export default function AboutPage() {
           </div>
           <div className="w-full md:w-1/2 p-4">
             <h2 className="font-bold text-2xl mb-4 text-primary">Solution</h2>
-            <p className="text-secondary">
+            <p className="text-secondary-foreground">
               To address this issue, the project implements deep learning
               models, specifically LSTM and GRU, to learn from historical
               sequences of air pollutant data and forecast future levels. The

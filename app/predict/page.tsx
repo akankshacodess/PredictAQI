@@ -101,7 +101,7 @@ export default function Predict() {
     <>
       <div>
         <h2 className={title()}>AQI Prediction</h2>
-        <div className="p-6 grid grid-cols-2 md:grid-cols-1 gap-6">
+        <div className="p-6 grid grid-cols-1 gap-6">
           <form onSubmit={handleSubmit} className="w-full max-w-md ">
             <div className=" mb-5">
               <label

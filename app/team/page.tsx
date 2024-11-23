@@ -48,7 +48,7 @@ const TeamMember: React.FC<TeamMember> = ({
   //     </Link>
   //   </CardFooter>
   // </Card>
-  <Card className="py-4">
+  <Card className="py-4 m-4">
     <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
       {/* <p className="text-tiny uppercase font-bold">Daily Mix</p>
         <small className="text-default-500">12 Tracks</small>
@@ -74,12 +74,12 @@ const TeamMember: React.FC<TeamMember> = ({
       </p>
       <h4 className="font-bold text-large">{name}</h4>
       <CardFooter className="justify-center gap-4">
-      <Link href={github} isExternal className="hover:text-blue-500">
-        <GithubIcon className="text-default-500" />
-      </Link>
-      <Link href={linkedin} isExternal>
-        <LinkedinIcon className="text-default-500" />
-      </Link>
+        <Link href={github} isExternal className="hover:text-blue-500">
+          <GithubIcon className="text-default-500" />
+        </Link>
+        <Link href={linkedin} isExternal>
+          <LinkedinIcon className="text-default-500" />
+        </Link>
       </CardFooter>
     </CardBody>
   </Card>
@@ -87,14 +87,6 @@ const TeamMember: React.FC<TeamMember> = ({
 
 export default function App() {
   const teamMembers = [
-    {
-      name: "Dr. Deepali Sharma",
-      designation: "Mentor",
-      email: "",
-      avatar: "/public/images/team1.jpg",
-      github: "https://github.com/akankshacodess",
-      linkedin: "https://www.linkedin.com/in/akanksha-gupta-86806921b/",
-    },
     {
       name: "Akanksha Gupta",
       designation: "Frontend Developer",
